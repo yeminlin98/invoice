@@ -1,25 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./dist/output.css">
-</head>
-<body>
-<!-- <h1 class="text-3xl ">hedhdjfdhf</h1> -->
+    <link rel="stylesheet" href="./dist/output.css" />
+  </head>
+  <body>
+    <main id="app" class="container m-auto">
+      <header class="mb-7">
+ <div class="py-3 ">
+  <h1 class=" text-3xl font-bold">Ye Min Solution</h1>
+  <h3 class=" text-blue-700 text-xl">Invoice App</h3>
+ </div>
+      </header>
+      <section class="mb-10">
+        <form action="#" class="addRecordForm">
+          <div class="grid gap-2 grid-cols-5">
+            <div class="col-span-2">
+              <label
+                for=""
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >Select your product</label
+              >
+              <select
+                id="productSelect"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                required
+              >
+                <option selected>Choose a country</option>
+                <option value="US">United States</option>
+           
+              </select>
+            </div>
+            <div class="col-span-2">
+              <div>
+                <label
+                  for="first_name"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Quantity</label
+                >
+                <input
+                  type="number"
+                  id="quantityInput"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="Quantity"
+                  required
+                />
+              </div>
+            </div>
+            <div class="col-span-1  mt-7  w-full h-full items-center">
+              <button
+                type="button"
+                class="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+              >
+                Cyan
+              </button>
+            </div>
+          </div>
+        </form>
+      </section>
 
+      <section>
+        <div class="relative overflow-x-auto">
+          <table
+            class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
+          >
+            <thead
+              class="text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400"
+            >
+              <tr>
+                <th scope="col" class="px-6 py-3 rounded-s-lg">#</th>
+                <th scope="col" class="px-6 py-3 rounded-s-lg">Product name</th>
+                <th scope="col" class="px-6 py-3 rounded-e-lg">Price</th>
+                <th scope="col" class="px-6 py-3">Qty</th>
+                <th scope="col" class="px-6 py-3 rounded-e-lg">Cost</th>
 
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bg-white dark:bg-gray-800">
+                <th
+                scope="row"
+                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+              >
+              1
+              </th>
+                <th
+                  scope="row"
+                  class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                >
+                  Apple MacBook Pro 17"
+                </th>
+                <td class="px-6 py-4 text-end">1</td>
+                <td class="px-6 py-4 text-end">2999</td>
+                <td class="px-6 py-4 text-end">2999</td>
 
+              </tr>
+              <tr class="bg-white dark:bg-gray-800">
+                <th
+                scope="row"
+                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+              >
+              1
+              </th>
+                <th
+                  scope="row"
+                  class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                >
+                  Apple MacBook Pro 17"
+                </th>
+                <td class="px-6 py-4 text-end">1</td>
+                <td class="px-6 py-4 text-end">2999</td>
+                <td class="px-6 py-4 text-end">2999</td>
 
+              </tr> <tr class="bg-white dark:bg-gray-800">
+                <th
+                scope="row"
+                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+              >
+              1
+              </th>
+                <th
+                  scope="row"
+                  class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                >
+                  Apple MacBook Pro 17"
+                </th>
+                <td class="px-6 py-4 text-end">1</td>
+                <td class="px-6 py-4 text-end">2999</td>
+                <td class="px-6 py-4 text-end">2999</td>
 
+              </tr>
+            
+            </tbody>
+           
+          </table>
+        </div>
+      </section>
+    </main>
 
-
-
-
-
-
-<script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
-
-</body>
+    <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
+  </body>
 </html>
