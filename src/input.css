@@ -5,3 +5,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+  counter-reset:recordIndex ;
+}
+.th-counter::before{
+
+  counter-increment:recordIndex  ;
+  content: counter(recordIndex);
+}
