@@ -6,8 +6,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="./dist/output.css" />
   </head>
-  <body class="px-3 md:px-0">
-    <main id="app" class="container m-auto min-h-screen flex flex-col">
+  <body class="px-5 md:px-0">
+    <main id="app" class="max-w-{600px} m-auto min-h-screen flex flex-col">
       <header class="mb-7">
         <div class="py-3">
           <h1 class="text-3xl font-bold">Ye Min Solution</h1>
@@ -66,14 +66,22 @@
               class="text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400"
             >
               <tr>
-                <th scope="col" class="px-6 py-3 rounded-s-lg text-end">Product ID</th>
-                <th scope="col" class="px-6 py-3 rounded-s-lg text-end">Product name</th>
+                <th scope="col" class="px-6 py-3 rounded-s-lg text-end">
+                  Product ID
+                </th>
+                <th scope="col" class="px-6 py-3 rounded-s-lg text-end">
+                  Product name
+                </th>
                 <th scope="col" class="px-6 py-3 text-end">Qty</th>
-                <th scope="col" class="px-6 py-3 rounded-e-lg text-end">Price</th>
-                <th scope="col" class="px-6 py-3 rounded-e-lg text-end">Cost</th>
+                <th scope="col" class="px-6 py-3 rounded-e-lg text-end">
+                  Price
+                </th>
+                <th scope="col" class="px-6 py-3 rounded-e-lg text-end">
+                  Cost
+                </th>
               </tr>
             </thead>
-            <tbody  id="recordGroup">
+            <tbody id="recordGroup">
               <!-- <tr class="bg-white dark:bg-gray-800">
                 <th
                   scope="row"
@@ -90,22 +98,31 @@
                 <td class="px-6 py-4 text-end">2999</td>
                 <td class="px-6 py-4 text-end">2999</td>
               </tr> -->
-            
-              <tr class=" font-medium hidden last:table-row text-gray-900   dark:text-white">
-              
-                
-                <td class="px-6 py-4 text-center " colspan="5">There is no products,    so you buy something </td>
-            
-              </tr> 
-            
 
-               
+              <tr
+                class="font-medium hidden last:table-row text-gray-900 dark:text-white"
+              >
+                <td class="px-6 py-4 text-center" colspan="5">
+                  There is no products, so you buy something
+                </td>
+              </tr>
             </tbody>
             <tfoot class="">
               <tr class="bg-white col-span-4 dark:bg-gray-800">
-                <td class="px-6 py-4 text-center" colspan="4">Total</td>
+                <td
+                  class="px-6 py-4 text-center text-md font-bold text-black"
+                  colspan="4"
+                >
+                  Total
+                </td>
 
-                <td class="px-6 py-4 text-end" colspan="1">2999</td>
+                <td
+                  class="px-6 py-4 text-end text-md font-bold text-black"
+                  colspan="1"
+                  id="recordTotal"
+                >
+                  0
+                </td>
               </tr>
             </tfoot>
           </table>

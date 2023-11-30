@@ -4,6 +4,7 @@ const recordForm = app.querySelector("#recordForm")
 const productSelect = app.querySelector("#productSelect")
 const quantityInput = app.querySelector("#quantityInput")
 const recordGroup = app.querySelector("#recordGroup")
+const recordTotal = app.querySelector("#recordTotal")
 
 //data
 const products = [
@@ -39,6 +40,10 @@ const products = [
 
     }
 ]
+
+
+
+
 //functions
 const productOption = (name, id) => {
     const option = document.createElement("option")
@@ -46,7 +51,7 @@ const productOption = (name, id) => {
     option.value = id;
     return option;
 };
-const createUi = (productName,productPrice, quantity) => {
+const createUi = (productName, productPrice, quantity) => {
     const cost = productPrice * quantity;
     const tr = document.createElement("tr")
     tr.className = "bg-white dark:bg-gray-800";
@@ -68,20 +73,27 @@ const createUi = (productName,productPrice, quantity) => {
  
   <td class="px-6 py-4 text-end">${productPrice}</td>
   <td class="px-6 py-4 text-end">${quantity}</td>
-  <td class="px-6 py-4 text-end">${cost}</td>
+  <td class="px-6 py-4 text-end record-cost">${cost}</td>
  `
     return tr;
 }
-
-
-
-
 const productRender = (items) => {
     items.forEach(({ id, name }) =>
 
         productSelect.append(new Option(name, id))
     );
 };
+
+
+// let total=0;
+const calculateRecordTotal = () => {
+    const total = [...app.querySelectorAll(".record-cost")].reduce((pv, cv) => pv + parseFloat(cv.innerText), 0)
+
+    recordTotal.innerText = total;
+    return total;
+}
+
+
 
 
 //initial runner
@@ -94,12 +106,16 @@ const recordFormHandler = (event) => {
     event.preventDefault();
     const currentProduct = products.find(product => product.id == productSelect.value)
     // console.log(currentProduct);
-console.log(quantityInput.valueAsNumber);
+    // console.log(quantityInput.valueAsNumber);
 
 
 
-    recordGroup.append(createUi(currentProduct.name, currentProduct.price, quantityInput.valueAsNumber))
+    recordGroup.append(createUi(currentProduct.name,
+        currentProduct.price, quantityInput.valueAsNumber));
+
     recordForm.reset();
+    calculateRecordTotal();
+
 }
 
 
